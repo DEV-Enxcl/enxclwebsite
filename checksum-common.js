@@ -26,17 +26,20 @@ export function buildChecksumEntries(rootDir, options = {}) {
     exclude = DEFAULT_EXCLUDES,
     skip = () => false,
     baseDir = rootDir,
+    pathSeparator = '\\',
+    uppercase = true,
   } = options;
 
   const files = walk(rootDir, [], { exclude, skip });
 
   const entries = files.map((file) => {
-    const rel = path.relative(baseDir, file).split(path.sep).join('\\');
-    const hash = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex').toUpperCase();
-    return { rel, line: `${hash}  ${rel}` };
+    const rel = path.relative(baseDir, file).split(path.sep).join(pathSeparator);
+    const hash = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+    const normalizedHash = uppercase ? hash.toUpperCase() : hash.toLowerCase();
+    return { rel, line: `${normalizedHash}  ${rel}` };
   });
 
-  entries.sort((a, b) => a.rel.toLowerCase().localeCompare(b.rel.toLowerCase()));
+  entries.sort((a, b) => (a.rel < b.rel ? -1 : a.rel > b.rel ? 1 : 0));
   return entries;
 }
 

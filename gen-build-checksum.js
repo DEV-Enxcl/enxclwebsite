@@ -16,9 +16,11 @@ if (!buildDir) {
 }
 
 const entries = buildChecksumEntries(buildDir, {
-  baseDir: buildDir,
+  baseDir: ROOT,
   exclude: new Set(['node_modules', '.git', '.vscode', '.vs']),
-  skip: (filePath) => filePath.endsWith('.map'),
+  skip: () => false,
+  pathSeparator: '/',
+  uppercase: false,
 });
 
 writeChecksumFile(ROOT, OUTPUT_FILE, entries);
