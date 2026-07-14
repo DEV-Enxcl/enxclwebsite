@@ -9,7 +9,9 @@ const QualityPolicyTailwind = () => {
               <p className="text-[#ffbe47] text-[34px] mb-2 font-bold">Quality Policy</p>
 
               <p className="text-white/90 font-semibold text-justify py-4 text-[24px] mb-3">
-              We are committed to exceeding customer expectations by upholding quality and legal standards, embracing global best practices, continuously improving our processes, and cultivating a culture of excellence that fosters lasting, trust-based relationships.
+             ITExS, a division of enxcl Business Solutions Private Limited, is committed to delivering technology consulting and software development services that meet customer requirements and applicable statutory, regulatory, and contractual obligations. We aim to provide innovative and reliable solutions that create value for our customers and support our strategic business objectives.
+
+Through competent personnel, effective processes, risk-based thinking, and continual improvement of the Quality Management System, we strive to enhance customer satisfaction, operational excellence, and sustainable organizational growth.
               </p>
             </div>
             <div className="w-[250px]">

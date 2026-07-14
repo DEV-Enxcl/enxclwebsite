@@ -288,7 +288,7 @@ const NavItems = ({ textColorClass, closeMenu, menuOpen, setMenuOpen }) => {
                                     navigateTo('/blogs');
                                     closeMenu();
                                 }}>
-                                    <span className="text-[18px] font-semibold">Blogs</span>
+                                    <span className="text-[18px] font-semibold">Blogs</span><br/>
                                     <span className="text-sm">Inspiring Perspectives</span>
                                     <div className="h-[2px] w-full bg-gray-500 group-hover:bg-[#ffbe47]"></div>
                                 </div>
@@ -296,7 +296,7 @@ const NavItems = ({ textColorClass, closeMenu, menuOpen, setMenuOpen }) => {
                                     navigateTo('/events');
                                     closeMenu();
                                 }}>
-                                    <span className="text-[18px] font-semibold">Events</span>
+                                    <span className="text-[18px] font-semibold">Events</span><br/>
                                     <span className="text-sm">Enlightening and Transformative</span>
                                     <div className="h-[2px] w-full bg-gray-500 group-hover:bg-[#ffbe47]"></div>
                                 </div>
